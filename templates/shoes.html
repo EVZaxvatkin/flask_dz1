@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Обувь
+{% endblock %}
+
+{% block content %}
+    <table>
+        <tr>
+            <td>{{type}}</td>
+            <td>{{size}}</td>
+            <td>{{price}}</td>
+        </tr>
+        {% for shoes in shoes_list %}
+        <tr>
+            <td>{{shoes.type}}</td>
+            <td>{{shoes.size}}</td>
+            <td>{{shoes.price}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

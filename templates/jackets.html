@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Куртки
+{% endblock %}
+
+{% block content %}
+    <table>
+        <tr>
+            <td>{{type}}</td>
+            <td>{{size}}</td>
+            <td>{{price}}</td>
+        </tr>
+        {% for jackets in jackets_list %}
+        <tr>
+            <td>{{jackets.type}}</td>
+            <td>{{jackets.size}}</td>
+            <td>{{jackets.price}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
